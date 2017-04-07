@@ -1,38 +1,36 @@
 import React from 'react';
-
+import {Navbar, Nav, NavItem} from "react-bootstrap";
 export default class Navigation extends React.Component{
   render(){
-
-    function SpotMe(props){
+    function NavigationInstance(props){
       return(
-        <nav>
-          <div id="spotme-logo-content">
-            <a href="#">
-              <img id="spotme-logo" src={props.spotmeLogo}/>
-            </a>
-            <ul>
-              <li><a href=""><p id="par-logout">Log out</p></a></li>
-              <li>
-                <a href="" id="message-logo-link">
-                    <img id="message-logo" src = {props.messageLogo}/>
-                    <p id="par-messages">Messages</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Navbar default collapseOnSelect fixedTop>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#"><img className="navbar-logo" src={props.navbarImage}/></a>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+            </Navbar.Header>
+              <Navbar.Collapse>
+                <Nav pullRight>
+                  <NavItem eventKey={1} href="#"><img className="navbar-message" src={props.messageImage}/>Messages</NavItem>
+                </Nav>
+              </Navbar.Collapse>
+        </Navbar>
       );
     }
-    const spotmeNavigationProps = {
-      spotmeLogo: require('../assets/img/SpotMe_logo.png'),
-      messageLogo: require('../assets/img/messages_icon.png'),
+
+    const navbarProps = {
+      navbarImage: require('../assets/img/SpotMe_logo.png'),
+      messageImage: require('../assets/img/messages_icon.png')
     };
+
     return(
-      <div id="header-nav">
-        <SpotMe
-          spotmeLogo = {spotmeNavigationProps.spotmeLogo}
-          messageLogo = {spotmeNavigationProps.messageLogo}
-          />
+      <div>
+        <NavigationInstance
+          navbarImage = {navbarProps.navbarImage}
+          messageImage = {navbarProps.messageImage}
+        />
       </div>
     );
   }

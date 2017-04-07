@@ -1,21 +1,21 @@
 import React from 'react';
+import {Navbar} from 'react-bootstrap';
 
 export default class Footer extends React.Component{
   render(){
     return(
-        <div className="footer-wrapper">
-          <div className="footer-container">
-            <div className="footer-content">
+      <footer>
+          <nav className="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div className="navbar-header">
               <p>Venmo SpotMe $6 to have him as your trainer today!</p>
             </div>
-            <div className="footer-button">
-              <div className="btn-section">
-                <button className="chat-button-2">Chat</button>
-              </div>
+            <div>
+              <p className="navbar-right">
+                <button className="btn-chat">Chat</button>
+              </p>
             </div>
-          </div>
-          <div className="no-content"></div>
-        </div>
+        </nav>
+      </footer>
     );
   }
 }
