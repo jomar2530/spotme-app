@@ -1,7 +1,13 @@
 import React from 'react';
 
 export default class LayoutComponent extends React.Component{
+
   render(){
+
+    function handleClick(e) {
+      e.preventDefault();
+      location.href='https://www.messenger.com/t/100000198021490';
+    }
 
     function Profile(props){
       return(
@@ -11,7 +17,7 @@ export default class LayoutComponent extends React.Component{
               <img className="img-profile" src={props.userPicture}/>
             </div>
             <div className="col-md-6" id="profile-content-2">
-              <p>chicharapcrunch16 <button className="btn-chat">Chat</button></p>
+              <p>chicharapcrunch16 <button onClick={handleClick} className="btn-chat">Chat</button></p>
               <p id="parag-content">8 years of experience.<br/> Specializes in bodybuilding and weightloss.<br/> Top trainer in Asia 2012 - 2017 (Fitness First)</p>
             </div>
           </div>

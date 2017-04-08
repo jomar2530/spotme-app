@@ -3,6 +3,11 @@ import {Navbar} from 'react-bootstrap';
 
 export default class Footer extends React.Component{
   render(){
+    function handleClick(e) {
+      e.preventDefault();
+      location.href='https://www.messenger.com/t/100000198021490';
+    }
+
     return(
       <footer>
           <nav className="navbar navbar-default navbar-fixed-bottom" role="navigation">
@@ -11,7 +16,7 @@ export default class Footer extends React.Component{
             </div>
             <div>
               <p className="navbar-right">
-                <button className="btn-chat">Chat</button>
+                <button className="btn-chat" onClick={handleClick} >Chat</button>
               </p>
             </div>
         </nav>

@@ -72,6 +72,9 @@ footer .btn-chat{
   margin-bottom: 15px;
   background-color: #03A9F4;
 }
+footer .btn-chat:hover{
+  background-color: #2196F3;
+}
 .btn-chat{
   font-size: 14px;
   color:  #ffffff;
@@ -81,6 +84,10 @@ footer .btn-chat{
   margin-bottom: 15px;
   background-color: #03A9F4;
 }
+.btn-chat:hover{
+  background-color: #2196F3;
+}
+
 
 footer .navbar-right{
   margin: 0;
